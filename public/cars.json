@@ -1,0 +1,109 @@
+[
+  {
+    "name": "LEXUS RX",
+    "price": 69253,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/2461-1-preview_rx18.webp",
+    "code": 3456,
+    "color": "darkgreen",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS NX",
+    "price": 53298,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/2668-1-2021_lexus_all_new_nx_overview_350h_gallery_01_1920x1080_tcm_3177_2272995.webp",
+    "code": 3457,
+    "color": "grey",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS UX",
+    "price": 40375,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/1334-1-2018_lexus_ux_ru_gal_2.webp",
+    "code": 3458,
+    "color": "white",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS LX",
+    "price": 138731,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/2695-1-lxp1302.webp",
+    "code": 3459,
+    "color": "grey",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS ES",
+    "price": 57565,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/2710-1-es_range_low_16x9_27.webp",
+    "code": 3460,
+    "color": "darkmagenta",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS GX",
+    "price": 70909,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/2412-1-gx_460_luxury.webp",
+    "code": 3461,
+    "color": "black",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS LC",
+    "price": 91532,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/2408-1-lc500.webp",
+    "code": 3462,
+    "color": "yellow",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS LS",
+    "price": 82453,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/1062-1-day_exterior_04_1k2.webp",
+    "code": 3463,
+    "color": "darkgrey",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS RX350",
+    "price": 65984,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/2464-1-preview_rx13.webp",
+    "code": 3464,
+    "color": "grey",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS RX450H",
+    "price": 77290,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/2548-1-2468_preview_rx20.webp",
+    "code": 3465,
+    "color": "brown",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS UX250H",
+    "price": 40375,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/1336-1-ux_02_gallery_1920x1_1.webp",
+    "code": 3466,
+    "color": "blue",
+    "isFavorite": false
+  },
+
+  {
+    "name": "LEXUS UX250H AWD",
+    "price": 51379,
+    "img": "https://cityplaza.lexus.ua/uploads/thumb/1334-1-2018_lexus_ux_ru_gal_2.webp",
+    "code": 3467,
+    "color": "white",
+    "isFavorite": false
+  }
+]
