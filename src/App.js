@@ -1,25 +1,23 @@
-import { Component } from 'react';
-import CardList from './components/CardList/CardList';
+import { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
-import Modal from './components/Modal/Modal';
-import styles from './App.module.scss';
-
-class App extends Component {
-	state = {
-		cars: [],
-		counter: 0,
-		counterFav: 0,
-		favorite: [],
-		carts: [],
-		modalProps: {},
-		cardProps: {},
-		isOpenModal: false
-	}
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './AppRoutes';
 
 
-	addToCart = (card) => {
-		this.setState((current) => {
-			const carts = [...current.carts];
+const App = () => {
+	const [cars, setCars] = useState([]);
+	const [counter, setCounter] = useState(0);
+	const [counterFav, setCounterFav] = useState(0);
+	const [favorite, setFavorite] = useState([]);
+	const [carts, setCarts] = useState([]);
+	const [modalProps, setModalProps] = useState({});
+	const [cardProps, setCardProps] = useState({});
+	const [isOpenModal, setIsOpenModal] = useState(false);
+
+
+	const addToCart = (card) => {
+		setCarts((current) => {
+			const carts = [...current];
 
 			const index = carts.findIndex(el => el.code === card.code)
 
@@ -30,41 +28,54 @@ class App extends Component {
 			}
 
 			localStorage.setItem("carts", JSON.stringify(carts))
-			return { carts }
+			return carts
 		})
 	}
 
-	toggleModal = (value) => {
-		this.setState({ isOpenModal: value })
+	const toggleModal = (value) => {
+		setIsOpenModal(value)
 	}
 
-	setModalProps = (value) => {
-		this.setState({ modalProps: value })
-	}
-
-	setCardProps = (value) => {
-		this.setState({ cardProps: value })
-	}
-	cartCounter = (carts) => {
+	const cartCounter = (carts) => {
 		const acc = carts.reduce((acc, el) => {
 			if (el.count) {
 				acc += el.count;
 			}
 			return acc;
-		}, 0);
+		}, 1);
 		localStorage.setItem('counter', acc);
-		this.setState({ counter: acc })
+		setCounter(acc);
+
+	}
+	const dicrementCartCounter = (carts, counter, code) => {
+		const acc = carts.reduce((acc, el) => {
+			if (el.code === code) {
+				acc = counter - el.count;
+			}
+			return acc;
+		}, 1);
+		localStorage.setItem('counter', acc);
+		setCounter(acc);
 
 	}
 
-	markAsFavorite = (card) => {
-		this.setState((current) => {
-			const favorite = [...current.favorite];
-			const cars = [...current.cars];
+
+	const markAsFavorite = (card) => {
+		setCars((current) => {
+			const cars = [...current];
 			const index = cars.findIndex(el => el.code === card.code)
-			const indexFav = favorite.findIndex(el => el.code === card.code)
 
 			cars[index].isFavorite = !cars[index].isFavorite;
+
+			localStorage.setItem("cars", JSON.stringify(cars));
+
+			return cars
+		})
+
+		setFavorite((current) => {
+			const favorite = [...current];
+			const index = cars.findIndex(el => el.code === card.code)
+			const indexFav = favorite.findIndex(el => el.code === card.code)
 
 			if (indexFav === -1 && cars[index].isFavorite) {
 				favorite.push({ ...cars[index] });
@@ -76,16 +87,16 @@ class App extends Component {
 			}
 
 			localStorage.setItem("favorite", JSON.stringify(favorite));
-			localStorage.setItem("cars", JSON.stringify(cars));
 
-			this.favCounter(favorite);
-			return { favorite, cars}
+			favCounter(favorite);
+			return favorite
 		})
 
 	}
 
 
-	favCounter = (favorite) => {
+
+	const favCounter = (favorite) => {
 		const acc = favorite.reduce((acc, el) => {
 			if (el.isFavorite) {
 				acc += 1;
@@ -93,65 +104,72 @@ class App extends Component {
 			return acc;
 		}, 0);
 		localStorage.setItem('counterFav', acc);
-		this.setState({ counterFav: acc })
+		setCounterFav(acc);
 
 	}
 
+	const deleteCartItem = (code) => {
+		setCarts((current) => {
+			const carts = [...current]
 
-	async componentDidMount() {
+			const index = carts.findIndex(el => el.code === code)
 
-		const carsArr = localStorage.getItem('cars');
-		const carts = localStorage.getItem('carts');
-		const favorite = localStorage.getItem('favorite');
-		const counter = localStorage.getItem('counter');
-		const counterFav = localStorage.getItem('counterFav');
+			if (index !== -1) {
+				carts.splice(index, 1);
+			}
 
-
-		if (carts) {
-			this.setState({ carts: JSON.parse(carts) });
-		}
-
-		if (favorite) {
-			this.setState({ favorite: JSON.parse(favorite) })
-		}
-
-		if (counter) {
-			this.setState({ counter: JSON.parse(counter) });
-		}
-		if (counterFav) {
-			this.setState({ counterFav: JSON.parse(counterFav) });
-		}
-
-		if (!carsArr) {
-			const cars = await fetch(`./cars.json`).then(res => res.json());
-			this.setState({ cars: cars })
-		} else {
-			this.setState({ cars: JSON.parse(carsArr) })
-		}
-
+			localStorage.setItem("carts", JSON.stringify(carts))
+			return carts
+		})
 	}
 
-	render() {
-		return (
+	useEffect(() => {
+		const getData = async () => {
+			const carsArr = localStorage.getItem('cars');
+			const carts = localStorage.getItem('carts');
+			const favorite = localStorage.getItem('favorite');
+			const counter = localStorage.getItem('counter');
+			const counterFav = localStorage.getItem('counterFav');
+
+
+			if (carts) {
+				setCarts(JSON.parse(carts));
+			}
+
+			if (favorite) {
+				setFavorite(JSON.parse(favorite))
+			}
+
+			if (counter) {
+				setCounter(JSON.parse(counter));
+			}
+			if (counterFav) {
+				setCounterFav(JSON.parse(counterFav));
+			}
+
+			if (!carsArr) {
+				const cars = await fetch(`./cars.json`).then(res => res.json());
+				setCars(cars)
+			} else {
+				setCars(JSON.parse(carsArr))
+			}
+		}
+		getData()
+	}, [])
+
+	return (
+		<BrowserRouter>
 			<>
-				<Header title={'Lexus official'} isFav={this.state.counterFav} inCart={this.state.counter} />
-
-				<CardList cars={this.state.cars} markAsFavorite={this.markAsFavorite} counter={this.counterCart}
-					setModalProps={this.setModalProps} toggleModal={this.toggleModal} setCardProps={this.setCardProps}/>
-				<Modal isOpen={this.state.isOpenModal} toggleModal={this.toggleModal} header={`Do you want to add this to cart?`}
-					closeButton={true} text={this.state.modalProps}
-					actions={<>
-						<button className={styles.modalConfirmBtn} onClick={() => {
-							this.addToCart(this.state.cardProps);
-							this.cartCounter(this.state.carts);
-							this.toggleModal(false);
-						}}>Ok</button>
-						<button className={styles.modalCancelBtn} onClick={() => this.toggleModal(false)}>Cancel</button>
-					</>} />
-
+				<Header title={'Lexus official'} isFav={counterFav} inCart={counter} />
+				<AppRoutes cars={cars} markAsFavorite={markAsFavorite} favorite={favorite} cartCounter={cartCounter}
+					setModalProps={setModalProps} toggleModal={toggleModal} setCardProps={setCardProps}
+					isOpenModal={isOpenModal} modalProps={modalProps}
+					addToCart={addToCart} carts={carts} cardProps={cardProps} 
+					deleteCartItem={deleteCartItem} dicrementCartCounter={dicrementCartCounter} counter={counter}/>
 			</>
-		);
-	}
+		</BrowserRouter>
+	);
+
 }
 
 export default App;

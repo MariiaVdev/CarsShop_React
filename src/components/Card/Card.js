@@ -1,13 +1,10 @@
-import React from 'react';
 import styles from './Card.module.scss';
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 
 
-class Card extends React.PureComponent {
-
-    render() {
-        const { name, price, img, code, color, markAsFavorite, setModalProps, toggleModal, setCardProps, isFavorite} = this.props;
+const Card = (props) => {
+        const { name, price, img, code, color, markAsFavorite, setModalProps, toggleModal, setCardProps, isFavorite} = props;
         return (
 
             <div className={styles.cardWrapper}>
@@ -27,14 +24,13 @@ class Card extends React.PureComponent {
                 <div className={styles.cardPrice}><p><b>${price}</b>
                     <Button bgColor={'black'} textBtn={'Add to cart'} onClick={() => {
                         setModalProps({ code, name });
-                        setCardProps({ name, price, code, color });
+                        setCardProps({ name, price, img, code, color });
                         toggleModal(true);
                     }} /></p>
                 </div>
             </div>
 
         )
-    }
 }
 
 Card.propTypes = {

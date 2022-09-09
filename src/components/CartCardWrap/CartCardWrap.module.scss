@@ -1,0 +1,51 @@
+.headerCartWrapper {
+    height: 25px;
+
+}
+
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 10px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+.btnDel {
+    position: absolute;
+    margin: 5px 0px 0px 310px;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../../../public/img/close.png");
+
+    &:hover {
+        box-shadow: 0 0 4px 0 rgba(34, 60, 80, 0.6);
+        filter: brightness(1);
+    }
+
+    &:active {
+        box-shadow: 0 0 4px 0 rgba(34, 60, 80, 0);
+    }
+}
+
+.footerCart {
+    text-align: right;
+
+    .imgCart {
+        width: 27px;
+        height: 27px;
+        margin-top: 0px;
+    }
+
+    .cartCount {
+        font-size: 24px;
+        margin-right: 0px;
+    }
+}

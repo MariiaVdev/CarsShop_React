@@ -1,12 +1,7 @@
-import React from 'react';
 import styles from './Modal.module.scss';
 import PropTypes from 'prop-types';
 
-class Modal extends React.PureComponent {
-
-
-    render() {
-        const { isOpen, toggleModal, header, closeButton, text, actions } = this.props;
+const Modal = ({ isOpen, toggleModal, header, closeButton, text, actions }) => {
 
         if (!isOpen) {
             return null;
@@ -33,7 +28,6 @@ class Modal extends React.PureComponent {
             </div>
 
         )
-    }
 }
 
 Modal.propTypes = {
