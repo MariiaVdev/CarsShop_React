@@ -1,0 +1,2 @@
+export const SET_IS_OPEN_MODAL = 'SET_IS_OPEN_MODAL'
+export const  SET_MODAL_DATA = 'SET_MODAL_DATA'

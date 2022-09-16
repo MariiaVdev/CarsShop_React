@@ -1,10 +1,11 @@
 import styles from './CartPage.module.scss';
-import PropTypes from 'prop-types';
 import CartCardWrap from '../../components/CartCardWrap/CartCardWrap';
+import { useSelector } from 'react-redux';
 
 
-const CartPage = (props) => {
-    const { carts, setModalProps, toggleModal } = props;
+
+const CartPage = () => {
+    const carts = useSelector(store => store.cart.data);
     if (carts.length === 0) {
         return (
             <h2>Cart is empty</h2>
@@ -16,8 +17,7 @@ const CartPage = (props) => {
             <h1>The best choise in your cart</h1>
             <div className={styles.wrapper}>
                 {carts.map(({ name, price, img, code, color, count }) =>
-                    <CartCardWrap name={name} price={price} img={img} code={code} color={color} key={code} count={count}
-                        setModalProps={setModalProps} toggleModal={toggleModal} />)}
+                    <CartCardWrap name={name} price={price} img={img} code={code} color={color} key={code} count={count} />)}
             </div>
         </>
 
@@ -25,11 +25,6 @@ const CartPage = (props) => {
     )
 }
 
-CartPage.propTypes = {
-    carts: PropTypes.array.isRequired,
-    setModalProps: PropTypes.func.isRequired,
-    toggleModal: PropTypes.func.isRequired
-}
 
 
 export default CartPage;

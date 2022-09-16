@@ -1,0 +1,5 @@
+export const GET_CARS = "GET_CARS";
+export const GET_FAVORITE = "GET_FAVORITE";
+export const MARK_AS_FAVORITE = "MARK_AS_FAVORITE";
+export const GET_COUNTER_FAVORITE = "GET_COUNTER_FAVORITE";
+export const COUNT_FAVORITE = "COUNT_FAVORITE";
