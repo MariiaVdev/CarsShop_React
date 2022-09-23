@@ -15,3 +15,29 @@ h1 {
     color: dimgray;
     text-align: center;
 }
+.btnCheck {
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+
+   button {
+    width: 400px;
+    height: 70px;
+    background-color: #276627;
+    border: none;
+    border-radius: 8px;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 4px 0 rgba(34, 60, 80, 0.6);
+        filter: brightness(1);
+    }
+
+    &:active {
+        box-shadow: 0 0 4px 0 rgba(34, 60, 80, 0);
+    }
+   }
+}

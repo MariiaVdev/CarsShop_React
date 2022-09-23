@@ -8,6 +8,7 @@ import FavoritePage from './pages/FavoritePage.js/FavoritePage';
 import { useDispatch,  useSelector } from 'react-redux';
 import { addToCartAC, countCartAC, deleteItemFromCartAC, dicrementCountCartAC } from './store/cart/actionCreators';
 import { setIsOpenModalAC } from './store/modal/actionCreators';
+import ModalForm from './components/ModalForm/ModalForm';
 
 
 
@@ -45,6 +46,7 @@ const AppRoutes = () => {
                             }}>Ok</button>
                             <button className={styles.modalCancelBtn} onClick={() => dispatch(setIsOpenModalAC(false))}>Cancel</button>
                         </>} />
+                        <ModalForm/>
                 </>
             } />
             <Route path='/favorite' element={

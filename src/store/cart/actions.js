@@ -4,5 +4,7 @@ export const ADD_TO_CART = "ADD_TO_CART";
 export const COUNT_CART = "COUNT_CART";
 export const DICREMENT_COUNT_CART = "DICREMENT_COUNT_CART";
 export const DELETE_ITEM_FROM_CART = "DELETE_ITEM_FROM_CART";
+export const RESET_CART = "RESET_CART";
+export const RESET_COUNTER_CART = "RESET_COUNTER_CART";
 
 

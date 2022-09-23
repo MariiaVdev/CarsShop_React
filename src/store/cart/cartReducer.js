@@ -1,4 +1,4 @@
-import { GET_CART, GET_COUNTER_CART, ADD_TO_CART, COUNT_CART, DICREMENT_COUNT_CART, DELETE_ITEM_FROM_CART } from "./actions";
+import { GET_CART, GET_COUNTER_CART, ADD_TO_CART, COUNT_CART, DICREMENT_COUNT_CART, DELETE_ITEM_FROM_CART, RESET_CART, RESET_COUNTER_CART } from "./actions";
 import produce from 'immer';
 
 const saveCartToLS = (value) => {
@@ -73,6 +73,18 @@ const carsReducer = (state = initialState, action) => {
 				draftState.data.splice(index, 1);
 			}
                 saveCartToLS(draftState.data);
+            })
+        }
+        case RESET_CART: {
+            return produce(state, draftState => {
+                localStorage.removeItem('carts');
+                draftState.data = [];
+            })
+        }
+        case RESET_COUNTER_CART: {
+            return produce(state, draftState => {
+                localStorage.removeItem('counter');
+                draftState.counter = 0;
             })
         }
         default: {

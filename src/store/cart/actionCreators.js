@@ -1,4 +1,4 @@
-import { GET_CART, GET_COUNTER_CART, ADD_TO_CART, COUNT_CART, DICREMENT_COUNT_CART, DELETE_ITEM_FROM_CART } from "./actions"
+import { GET_CART, GET_COUNTER_CART, ADD_TO_CART, COUNT_CART, DICREMENT_COUNT_CART, DELETE_ITEM_FROM_CART, RESET_CART, RESET_COUNTER_CART } from "./actions"
 
 export const getCartAC = () => (dispatch) => {
 
@@ -34,5 +34,15 @@ export const dicrementCountCartAC = ( code ) => (dispatch) => {
 export const deleteItemFromCartAC = ( code ) => (dispatch) => {
 
     dispatch({ type: DELETE_ITEM_FROM_CART, payload: code })
+
+}
+export const resetCartAC = () => (dispatch) => {
+
+    dispatch({ type: RESET_CART })
+
+}
+export const resetCounterCartAC = () => (dispatch) => {
+
+    dispatch({ type: RESET_COUNTER_CART })
 
 }

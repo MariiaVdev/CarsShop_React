@@ -17,7 +17,7 @@ const App = () => {
 		dispatch(getCounterCartAC())
 		dispatch(getFavoriteAC())
 		dispatch(getCounterFavoriteAC())
-	}, []);
+	}, [dispatch]);
 
 
 	return (
