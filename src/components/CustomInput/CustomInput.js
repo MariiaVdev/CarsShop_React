@@ -36,21 +36,13 @@ const CustomInput = (props) => {
                     placeholder={placeholder}
                     value={value}
                     {...field} />}
-
-            {/* <input
-                name={name}
-                id={name}
-                type={type}
-                placeholder={placeholder}
-                value={value}
-                {...field} /> */}
             <br></br>
             <span className={styles.error}>{touched[name] && errors[name] ? errors[name] : ''}</span>
             <br></br>
         </>
     ), [value, field, touched, errors, label, name, placeholder, type])
 }
-// [value, touched, errors]
+
 CustomInput.propTypes = {
     type: PropTypes.string,
     placeholder: PropTypes.string,

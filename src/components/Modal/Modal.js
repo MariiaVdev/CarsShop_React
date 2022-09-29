@@ -14,7 +14,7 @@ const Modal = ({ header, closeButton, text, actions }) => {
     return (
         <div className={styles.modal}>
 
-            <div className={styles.modalBackground} onClick={closeModal}></div>
+            <div data-testid='Modal-bgd' className={styles.modalBackground} onClick={closeModal}></div>
 
             <div className={styles.modalMainContainer}>
                 <div className={styles.modalHeader}>
@@ -47,7 +47,7 @@ Modal.propTypes = {
 }
 
 Modal.defaultProps = {
-    user: {
+    text: {
         code: 3455,
         name: 'LEXUS'
     }

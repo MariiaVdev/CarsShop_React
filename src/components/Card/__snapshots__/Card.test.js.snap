@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Card should Card render in Card view, default props and Favorite is false 1`] = `
+<DocumentFragment>
+  <div
+    class="cardWrapper"
+  >
+    <img
+      alt="test"
+      src="img"
+    />
+    <div
+      class="cardName"
+    >
+      <h3>
+        test
+        <button
+          class="cardFavorite"
+        >
+          <span
+            class="cardFavoriteNoSelect"
+          />
+        </button>
+      </h3>
+    </div>
+    <div
+      class="cardCode"
+    >
+      Vendor code: 1234
+    </div>
+    <div
+      class="cardCode"
+    >
+      Color: 
+      <button
+        class="cardBtnColor"
+        style="background-color: grey;"
+      />
+    </div>
+    <div
+      class="cardPrice"
+    >
+      <p>
+        <b>
+          $12345
+        </b>
+        <button
+          class="btn"
+          style="background-color: black;"
+        >
+          Add to cart
+        </button>
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Render Card should Card render in Table view and Favorite is true 1`] = `
+<DocumentFragment>
+  <img
+    alt="test"
+    class="tblImg"
+    src="img"
+  />
+  <h3
+    class="tblCardName"
+  >
+    test 
+  </h3>
+  <button
+    class="cardFavorite"
+  >
+    <span
+      class="cardFavoriteSelect"
+    />
+  </button>
+  <b>
+    Vendor code:
+  </b>
+   1234
+  <b>
+    Color:
+  </b>
+   
+  <button
+    class="tblCardBtnColor"
+    style="background-color: red;"
+  />
+  <p>
+    <b>
+      $12345
+    </b>
+  </p>
+   
+  <button
+    class="btn"
+    style="background-color: black;"
+  >
+    Add to cart
+  </button>
+</DocumentFragment>
+`;

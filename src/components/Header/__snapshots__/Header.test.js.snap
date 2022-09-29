@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Header should Header render with default props 1`] = `
+<DocumentFragment>
+  <header>
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+    >
+      <span
+        class="headerTitle"
+      >
+        Lexus
+      </span>
+    </a>
+    <div
+      class="headerContainer"
+    >
+      <a
+        class=""
+        href="/favorite"
+      >
+        <img
+          alt="Favorite"
+          src="./img/favorite_Not.png"
+        />
+      </a>
+      <span
+        class="headerCount"
+      >
+        0
+      </span>
+      <a
+        class=""
+        href="/carts"
+      >
+        <img
+          alt="Cart"
+          class="headerCart"
+          src="./img/shopping-cart.png"
+        />
+      </a>
+      <span
+        class="headerCount"
+      >
+        0
+      </span>
+    </div>
+  </header>
+</DocumentFragment>
+`;

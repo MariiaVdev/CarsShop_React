@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Button should button render with all props 1`] = `
+<DocumentFragment>
+  <button
+    class="btn"
+    style="background-color: red;"
+  >
+    test
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Render Button should button render with default bgColor 1`] = `
+<DocumentFragment>
+  <button
+    class="btn"
+    style="background-color: blue;"
+  >
+    test without bg
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Render Button should button render with default props 1`] = `
+<DocumentFragment>
+  <button
+    class="btn"
+    style="background-color: blue;"
+  >
+    Open modal
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Render Button should button render with default text 1`] = `
+<DocumentFragment>
+  <button
+    class="btn"
+    style="background-color: red;"
+  >
+    Open modal
+  </button>
+</DocumentFragment>
+`;

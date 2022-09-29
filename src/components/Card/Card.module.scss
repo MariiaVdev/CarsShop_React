@@ -63,3 +63,40 @@
     background-image: url("../../../public/img/favorite_Yes.png");
   }
 }
+
+.tblImg {
+  width: 367px;
+  height: 200px;
+}
+
+tr {
+  width: 100%;
+}
+
+td {
+  width: auto;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tblCardCode {
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+
+.tblCardName {
+  font-size: 30px;
+}
+
+.tblCardPrice {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.tblCardBtnColor {
+  width: 30px;
+  height: 30px;
+  border: 1px lightgrey solid;
+}

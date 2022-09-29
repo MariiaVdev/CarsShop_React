@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render DisplayOrdered should DisplayOrdered render with custom props 1`] = `
+<DocumentFragment>
+  <div
+    class="cardWrapper"
+  >
+    <img
+      alt="test"
+      src="img"
+    />
+    <div
+      class="cardName"
+    >
+      <span>
+        <b>
+          test, 
+        </b>
+      </span>
+      <span>
+        Vendor code: 1234, 
+      </span>
+      <span>
+         Color: 
+        <button
+          class="cardBtnColor"
+          style="background-color: red;"
+        />
+        ,  
+      </span>
+      <span>
+        <b>
+          $12345
+        </b>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Render DisplayOrdered should DisplayOrdered render with default props 1`] = `
+<DocumentFragment>
+  <div
+    class="cardWrapper"
+  >
+    <img
+      alt="test"
+      src="img"
+    />
+    <div
+      class="cardName"
+    >
+      <span>
+        <b>
+          test, 
+        </b>
+      </span>
+      <span>
+        Vendor code: 1234, 
+      </span>
+      <span>
+         Color: 
+        <button
+          class="cardBtnColor"
+          style="background-color: grey;"
+        />
+        ,  
+      </span>
+      <span>
+        <b>
+          $12345
+        </b>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

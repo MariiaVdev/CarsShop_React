@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCartAC, getCounterCartAC } from './store/cart/actionCreators';
 import { getCarsAC } from './store/cars/actionCreators';
 import { getFavoriteAC, getCounterFavoriteAC } from './store/cars/actionCreators';
+import CardViewSwitcher from './components/CardViewSwitcher/CardViewSwitcher';
+import ViewContextProvider from './contexts/viewContext/ViewContextProvider';
 
 
 const App = () => {
@@ -24,7 +26,10 @@ const App = () => {
 		<BrowserRouter>
 			<>
 				<Header title={'Lexus official'} isFav={isFavorite} />
-				<AppRoutes />
+				<ViewContextProvider>
+					<CardViewSwitcher />
+					<AppRoutes />
+				</ViewContextProvider>
 			</>
 		</BrowserRouter>
 	);

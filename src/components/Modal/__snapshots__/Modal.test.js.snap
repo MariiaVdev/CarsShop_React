@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders should Modal no render without isOpen state 1`] = `<DocumentFragment />`;
+
+exports[`Modal renders should Modal render when state isOpen set true 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <div
+      class="modalBackground"
+      data-testid="Modal-bgd"
+    />
+    <div
+      class="modalMainContainer"
+    >
+      <div
+        class="modalHeader"
+      >
+        <p
+          class="modalHeaderText"
+        >
+          header
+        </p>
+        <button
+          class="modalClose"
+        />
+      </div>
+      <div
+        class="modalContentWrapper"
+      >
+        <p>
+          LEXUS
+        </p>
+        <p>
+          Are you ready to confirm your choice?
+        </p>
+      </div>
+      <div
+        class="modalButtonWrapper"
+      >
+        &lt;button&gt;OK&lt;/button&gt;
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Modal renders should Modal render with close button 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <div
+      class="modalBackground"
+      data-testid="Modal-bgd"
+    />
+    <div
+      class="modalMainContainer"
+    >
+      <div
+        class="modalHeader"
+      >
+        <p
+          class="modalHeaderText"
+        >
+          header
+        </p>
+        <button
+          class="modalClose"
+        />
+      </div>
+      <div
+        class="modalContentWrapper"
+      >
+        <p>
+          LEXUS
+        </p>
+        <p>
+          Are you ready to confirm your choice?
+        </p>
+      </div>
+      <div
+        class="modalButtonWrapper"
+      >
+        &lt;button&gt;OK&lt;/button&gt;
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Modal renders should Modal render with custom text 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <div
+      class="modalBackground"
+      data-testid="Modal-bgd"
+    />
+    <div
+      class="modalMainContainer"
+    >
+      <div
+        class="modalHeader"
+      >
+        <p
+          class="modalHeaderText"
+        >
+          test header
+        </p>
+        <button
+          class="modalClose"
+        />
+      </div>
+      <div
+        class="modalContentWrapper"
+      >
+        <p>
+          test
+        </p>
+        <p>
+          Are you ready to confirm your choice?
+        </p>
+      </div>
+      <div
+        class="modalButtonWrapper"
+      >
+        &lt;button&gt;TEST&lt;/button&gt;
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Modal renders should Modal render with default text 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <div
+      class="modalBackground"
+      data-testid="Modal-bgd"
+    />
+    <div
+      class="modalMainContainer"
+    >
+      <div
+        class="modalHeader"
+      >
+        <p
+          class="modalHeaderText"
+        >
+          header
+        </p>
+        <button
+          class="modalClose"
+        />
+      </div>
+      <div
+        class="modalContentWrapper"
+      >
+        <p>
+          LEXUS
+        </p>
+        <p>
+          Are you ready to confirm your choice?
+        </p>
+      </div>
+      <div
+        class="modalButtonWrapper"
+      >
+        &lt;button&gt;OK&lt;/button&gt;
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Modal renders should Modal render without close button 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <div
+      class="modalBackground"
+      data-testid="Modal-bgd"
+    />
+    <div
+      class="modalMainContainer"
+    >
+      <div
+        class="modalHeader"
+      >
+        <p
+          class="modalHeaderText"
+        >
+          header
+        </p>
+      </div>
+      <div
+        class="modalContentWrapper"
+      >
+        <p>
+          LEXUS
+        </p>
+        <p>
+          Are you ready to confirm your choice?
+        </p>
+      </div>
+      <div
+        class="modalButtonWrapper"
+      >
+        &lt;button&gt;OK&lt;/button&gt;
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

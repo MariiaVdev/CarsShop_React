@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders should Modal no render without isOpen state 1`] = `<DocumentFragment />`;
+
+exports[`Modal renders should Modal render when state isOpen set true 1`] = `
+<DocumentFragment>
+  <div
+    class="form"
+  >
+    <div
+      class="formBackground"
+      data-testid="ModalForm-bgd"
+    />
+    <div
+      class="formMainContainer"
+    >
+      <div
+        class="formHeader"
+      >
+        <h3>
+          Ordering
+        </h3>
+        <button
+          class="formClose"
+          data-testid="ModalForm-btn"
+        />
+      </div>
+      <div
+        class="formContentWrapper"
+      >
+        <span>
+          OrderedGoods
+        </span>
+        <span>
+          OrderForm
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

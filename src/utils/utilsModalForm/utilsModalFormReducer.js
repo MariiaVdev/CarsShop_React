@@ -1,8 +1,8 @@
 import produce from 'immer';
-import { SET_IS_OPEN_FORM, SET_FORM_DATA } from './actions'
+import { SET_IS_OPEN_FORM, SET_FORM_DATA } from '../../store/form/actions'
 
 const initialState = {
-    isOpenForm: false,
+    isOpenForm: true,
     modalForm: {}
 }
 
@@ -16,7 +16,7 @@ const formReducer = (state = initialState, action) => {
 
         case SET_FORM_DATA: {
             return produce(state, draftState => {
-                draftState.modalForm= action.payload;
+                draftState.formData = action.payload;
             });
         }
 

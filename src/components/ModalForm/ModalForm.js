@@ -14,11 +14,11 @@ const ModalForm = () => {
     const closeForm = () => { dispatch(setIsOpenFormAC(false)) };
     return (
         <div className={styles.form}>
-            <div className={styles.formBackground} onClick={closeForm}></div>
+            <div data-testid='ModalForm-bgd' className={styles.formBackground} onClick={closeForm}></div>
             <div className={styles.formMainContainer}>
                 <div className={styles.formHeader}>
                     <h3>Ordering</h3>
-                    <button className={styles.formClose} onClick={closeForm}></button>
+                    <button data-testid='ModalForm-btn' className={styles.formClose} onClick={closeForm}></button>
                 </div>
                 <div className={styles.formContentWrapper}>
                     <OrderedGoods />
